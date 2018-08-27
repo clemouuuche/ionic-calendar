@@ -8,11 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 var core_1 = require("@angular/core");
 var moment = require("moment");
+require('moment/locale/fr');
 var monthName = /** @class */ (function () {
     function monthName() {
     }
     monthName.prototype.transform = function (value, args) {
-        var lang = moment().locale(args);
+        var lang = moment().locale('fr');
         return lang.localeData().months(moment([2012, value - 1]));
     };
     monthName = __decorate([
